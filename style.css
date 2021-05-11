@@ -377,7 +377,7 @@ tr td:last-child {
   .recent-grid{
     grid-template-columns: 60% 40%;
   }
-
+/*
   .search-wrapper{
     display: none;
   }
@@ -418,7 +418,7 @@ tr td:last-child {
   .header{
     width: 100% !important;
     left: 0 !important;
-  }
+  } */
 }
 
 @media only screen and (max-width: 768px){
@@ -434,16 +434,20 @@ tr td:last-child {
     display: none;
   }
 
-  header h2 {
+  .sidebar{
+    left: -100% !important;
+  }
+
+   header h2 {
     display: flex;
     align-items: center;
   }
 
   header h2 label{
     display: inline-block;
-    text-align: center;
-    background: var(-main-color);
+    background: var(--main-color);
     padding-right: 0rem;
+    margin-right: 1rem;
     height: 40px;
     width: 40px;
     border-radius: 50%;
@@ -453,12 +457,12 @@ tr td:last-child {
     justify-content: center !important;
   }
 
-  header h2 span {
+  header h2 span{
     text-align: center;
     padding-right: 0rem;
   }
 
-  header h2 {
+  header h2{
     font-size: 1.1rem;
   }
 
@@ -467,7 +471,7 @@ tr td:last-child {
     margin-left: 0rem;
   }
 
-  .header{
+  header {
     width: 100% !important;
     left: 0 !important;
   }
@@ -478,13 +482,13 @@ tr td:last-child {
     width: 345px;
   }
 
-  #nav-toggle:checked + .sidebar.sidebar-brand,
-  #nav-toggle:checked + .sidebar li {
+  #nav-toggle:checked + .sidebar .sidebar-brand,
+  #nav-toggle:checked + .sidebar li{
     padding-left: 2rem;
     text-align: left;
   }
 
-  #nav-toggle:checked + .sidebar:hover li a{
+  #nav-toggle:checked + .sidebar li a {
     padding-left: 1rem;
   }
 
@@ -493,17 +497,11 @@ tr td:last-child {
     display: inline;
   }
 
-  .main-content{
-    margin-left: 70px;
-  }
-
-  .main-content header{
-    width: calc(100% - 70px);
-    left: 70px;
+  #nav-toggle:checked ~ .mian-content{
+    margin-left: 0rem !important;
   }
 }
 
-/* 为何要另外再写一个768px的样式？ */
 @media only screen and (max-width:560px){
   .cards{
     grid-template-columns: 100%;
